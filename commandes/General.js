@@ -1,8 +1,12 @@
+
+
+
+
 const { france } = require("../framework/france");
 const {getAllSudoNumbers,isSudoTableNotEmpty} = require("../bdd/sudo")
 const conf = require("../set");
 
-france({ nomCom: "owner", categorie: "General", reaction: "💞" }, async (dest, zk, commandeOptions) => {
+france({ nomCom: "owner", categorie: "General", reaction: "🧔" }, async (dest, zk, commandeOptions) => {
     const { ms , mybotpic } = commandeOptions;
     
   const thsudo = await isSudoTableNotEmpty()
@@ -51,23 +55,24 @@ france({ nomCom: "owner", categorie: "General", reaction: "💞" }, async (dest,
   }
 });
 
-france({ nomCom: "developer", categorie: "General", reaction: "💞" }, async (dest, zk, commandeOptions) => {
+france({ nomCom: "developer", categorie: "General", reaction: "🚘" }, async (dest, zk, commandeOptions) => {
     const { ms, mybotpic } = commandeOptions;
 
     const devs = [
-      { nom: "King Ibrahim", numero: "254710772666" },
-      { nom: "᚛kingibrahim᚜", numero: "254710772666" },
+      { nom: "France King", numero: "254710772666" },
+      { nom: "᚛Ibrahimadams᚜", numero: "254710772666" },
       // Ajoute d'autres développeurs ici avec leur nom et numéro
     ];
 
-    let message = "👊 *Welcome to BMW-MD!* here is the developer numbers:\n\n";
+    let message = "Oyaah 👊\n *Welcome to BMW-Md!*\n\n*💠━━💠CREATOR INFO💠━━💠*\n\n\n *◇NAME: _Ibrahim Adams_*\n*◇AGE: 20*\n*◇LOCATION: _On Earth_*\n*◇BELIEVER: YES ✅*\n*◇FRIENDLY: YES ✅*\n*◇EGOISTIC: _YEEES ✅_*\n*◇FAV MOVIE: _ONE EYE_*\n*◇INSTAGRAM: https://instagram.com/Ibrahim_tech_official*\n*◇Twitter: https://twitter.com/Ibrahim_adams*\n\n______________________________\n\n*🚖KEEP USING BMW-MD🚖*\n\n\n_The following are my contacts_:\n:";
     for (const dev of devs) {
       message += `----------------\n• ${dev.nom} : https://wa.me/${dev.numero}\n`;
     }
+   
   var lien = mybotpic()
     if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:message }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption: message }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -94,8 +99,8 @@ else {
 france({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, auteurMessage, } = commandeOptions; 
  
-  repondre("Support the developer by subscribing on youtube  ")
-  await zk.sendMessage(auteurMessage,{text : `https://www.youtube.com/@ibrahimmdgpt`},{quoted :ms})
+  repondre("look on pm sir ")
+  await zk.sendMessage(auteurMessage,{text : `https://wa.me/254757835036`},{quoted :ms})
 
 })
-
+ 

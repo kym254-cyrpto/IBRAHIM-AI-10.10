@@ -15,7 +15,7 @@ france({
   const { ms, repondre, arg } = commandeOptions;
      
   if (!arg[0]) {
-    repondre("wich song do you want.");
+    repondre("Please insert a song name.");
     return;
   }
 
@@ -29,14 +29,14 @@ france({
           
        let infoMess = {
           image: {url : videos[0]. thumbnail},
-         caption : `\n*song name :* _${videos[0].title}_
+         caption : `*BMW-MD SONG'S*\n\n*Title:* ${videos[0].title}
+         
+*Duration:* ${videos[0].timestamp}
+*Song Url:* ${videos[0].url}
 
-*Time :* _${videos[0].timestamp}_
-
-*Url :* _${videos[0].url}_
 
 
-_*DOWNLOADING...*_\n\n`
+*_Made by Ibrahim Adams._*`
        }
 
       
@@ -84,7 +84,7 @@ _*DOWNLOADING...*_\n\n`
 france({
   nomCom: "video",
   categorie: "Search",
-  reaction: "📽"
+  reaction: "🎞"
 }, async (origineMessage, zk, commandeOptions) => {
   const { arg, ms, repondre } = commandeOptions;
 
@@ -103,10 +103,13 @@ france({
 
       let InfoMess = {
         image: { url: videos[0].thumbnail },
-        caption: `*Video name :* _${Element.title}_
-*Time :* _${Element.timestamp}_
-*Url :* _${Element.url}_
-_*DOWNLOADING...*_\n\n`
+        caption: `*BMW-MD VIDEO'S*\n\n*Title :* ${Element.title}
+*Duration :* ${Element.timestamp}
+*Video Url:* ${Element.url}
+
+
+
+*Made by Ibrahim Adams*\n\n`
       };
 
       zk.sendMessage(origineMessage, InfoMess, { quoted: ms });
